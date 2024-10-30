@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{#butnsbutton_dlg.title}</title>
+    <script type="text/javascript" src="tiny_mce_popup.js"></script>
+    <script type="text/javascript" src="http://www.butns.com/butns.js"></script>
+    <script type="text/javascript" src="js/butnsbutton.js"></script>
+    <link href="css/butnsbutton.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="butnsbody">
+    <form onsubmit="butnsButtonCode.insertAction();return false;" action="#">
+
+      <table style="width:100%;border-spacing:0px 0px;">
+        <tr>
+          <td style="width:1px;font-size:100%;"><span class="yellowlabel" id="hreflabel">{#butnsbutton_dlg.url}</span></td>
+          <td style="width:5px;font-size:100%;"></td>
+          <td colspan="3" style="font-size:100%;"><input id="href" name="href" type="text" value="" class="mceFocus" onchange="butnsButtonCode.addLinkFromElement('href')" style="width:100%;"/></td>
+          <td style="width:10px;font-size:100%;"></td>
+          <td style="width:1px;font-size:100%;"><input type="button" class="mceButton" style="text-align:center;" id="Add" value="Add" onclick="butnsButtonCode.addLinkFromElement('href');"/></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="width:1px;font-size:100%;"><div class="yellowlabel"><span id="hreflabelpredef1">{#butnsbutton_dlg.urlpredef1}&nbsp;{#butnsbutton_dlg.urlpredef2}</span>&nbsp;"<span class="querytag"></span>"&nbsp;<span id="hreflabelpredef3">{#butnsbutton_dlg.urlpredef3}</span></div></td>
+          <td style="width:2px;"></td>
+          <td>      
+            <select id="hrefpredef" style="width:100%;font-size:100%;" onchange="butnsButtonCode.addLinkFromElement('hrefpredef')">
+        <optgroup label="Popular">
+          <option value="google">Google</option>
+          <option value="bing">Bing</option>
+          <option value="wikipedia">Wikipedia</option>
+          <option value="youtube">Youtube</option>
+          <option value="yahoo">Yahoo!</option>
+          <option value="twitter">Twitter</option>
+          <option value="flickr">Flickr</option>
+          <option value="ebay">Ebay</option>
+        </optgroup>
+        <optgroup label="Search Tools">
+          <option value="answers">Answers</option>
+          <option value="ask">Ask.com</option>
+          <option value="bing">Bing</option>
+          <option value="creativecommons">Creative Commons</option>
+          <option value="google">Google</option>
+          <option value="pipl">Pipl</option>
+          <option value="wolframalpha">Wolfram Alpha</option>
+          <option value="yahoo">Yahoo!</option>
+        </optgroup>
+        <optgroup label="Social">
+          <option value="bebo">Bebo</option>
+          <option value="digg">Digg</option>
+          <option value="delicious">Del.icio.us</option>
+          <option value="diigo">Diigo</option>
+          <option value="faves">Faves</option>
+          <option value="reddit">Reddit</option>
+          <option value="stumbleupon">StumbleUpon</option>
+        </optgroup>
+        <optgroup label="Personal">
+          <option value="facebook">Facebook</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="myspace">MySpace</option>
+          <option value="plaxo">Plaxo</option>
+          <option value="twitter">Twitter</option>
+        </optgroup>
+        <optgroup label="Video+Pics+Music">
+          <option value="flickr">Flickr</option>
+          <option value="lastfm">Last.fm</option>
+          <option value="vimeo">Vimeo</option>
+          <option value="youtube">Youtube</option>
+        </optgroup>
+        <optgroup label="News">
+          <option value="ballhype">Ballhype</option>
+          <option value="fark">Fark</option>
+          <option value="gizmodo">Gizmodo</option>
+          <option value="propeller">Propeller</option>
+          <option value="slashdot">Slashdot</option>
+        </optgroup>
+        <optgroup label="Reference">
+          <option value="dictionary">Dictionary.com</option>
+          <option value="mw">Meriam Webster</option>
+          <option value="wikipedia">Wikipedia</option>
+        </optgroup>
+        <optgroup label="Science">
+          <option value="ncbi">NBCI (all dbs)</option>
+          <option value="pdb">Protein Data Bank</option>
+          <option value="pubmed">Pubmed</option>
+        </optgroup>
+        <optgroup label="Shopping">
+          <option value="amazon">Amazon</option>
+          <option value="ebay">Ebay</option>
+          <option value="yelp">Yelp</option>
+          <option value="kaboodle">Kaboodle</option>
+        </optgroup>
+      </select></td>
+          <td style="width:5px;"></td>
+          <td style="width:1px;"><input type="button" class="mceButton" style="text-align:center;" id="Add" value="Add" onclick="butnsButtonCode.addLinkFromElement('hrefpredef');"/></td>
+        </tr>
+      </table>
+
+      <br />
+      <div style="width:100%;margin:right:5px;height:125px;overflow-y:scroll;overflow-x:hidden;border:1px #c5c5c5 solid;">
+	<table id="linktable" cellspacing="0">
+	  <tr>
+            <td style="border-bottom:1px solid grey"></td>
+            <td style="border-bottom:1px solid grey" class="linkitemleft">{#butnsbutton_dlg.linkaddress}</td>
+            <td style="border-bottom:1px solid grey" class="linkitemright">{#butnsbutton_dlg.labelshown}</td>
+          </tr>
+	</table>
+      </div>
+
+      <div>
+        <p><span class="yellowlabel"><span style="padding:2px;">{#butnsbutton_dlg.preview}:</span> <span id="butnspreview"><span class="querytag"></span></span></span></p>
+      </div>
+
+
+      <div class="mceActionPanel" style="background:green;">
+	<div style="float:right">
+	  <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+        
+	<div style="float:right;width:5px;height:1px;"></div>
+        
+	<div style="float:right;">
+	  <input type="submit" id="insert" name="insert" value="{#insert}" />
+	</div>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+.mceLinkList, .mceAnchorList, #targetlist {width:280px;}
+.mceActionPanel {margin-top:7px;}
+#classlist, #title, #href, #label {width:250px;}
+#popupurl, #popupname {width:100px;}
+#popupwidth, #popupheight, #popupleft, #popuptop {width:30px;vertical-align:middle;text-align:center;}
+#id, #style, #classes, #target, #dir, #hreflang, #lang, #charset, #type, #rel, #rev, #tabindex, #accesskey {width:200px;}
+#events_panel input {width:200px;}
+
+.button {
+border:0; margin:0; padding:0;
+font-weight:bold;
+cursor:pointer;
+padding-bottom:2px;
+padding-left:5px;
+}
+
+.linkitemleft, .linkitemright {
+    width:50%;
+    margin:0px;
+    padding:0px;
+}
+
+.linkitemcheckbox {
+    margin:0px;
+    padding:0px;
+}
+
+.linktable {
+    border-spacing:1px;
+    width:100%;
+}
+
+.yellowlabel {
+    padding:2px;
+    border-bottom-left-radius:3px 3px;
+    border-bottom-right-radius:3px 3px;
+    border-top-left-radius:3px 3px;
+    border-top-right-radius:3px 3px;
+    background-image:url('../img/wordpress_headline_back_tile.png');
+}
